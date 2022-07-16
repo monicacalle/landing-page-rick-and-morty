@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./views/Home/Home";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CharacterList from "./views/Characters/List";
+import CharacterDetail from "./views/Characters/Detail";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <div className="p-5">
           <Routes>
             <Route index element={<Home />} />
+            <Route path="characters" element={<CharacterList />} />
+            <Route path="characters/:id" element={<CharacterDetail />} />
           </Routes>
         </div>
         <Footer />

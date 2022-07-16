@@ -8,11 +8,11 @@ const Navbar = () => {
       path: "/",
     },
     {
-      name: "features",
-      path: "/",
+      name: "characters",
+      path: "/characters",
     },
     {
-      name: "Pricing",
+      name: "",
       path: "/",
     },
   ];
@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
       <div className="container-fluid">
         <Link className="navbar-brand " to="/#">
-          Navbar
+          Rick and Morty
         </Link>
         <button
           className="navbar-toggler "
