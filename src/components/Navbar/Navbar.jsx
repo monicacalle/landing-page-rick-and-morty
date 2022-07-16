@@ -36,7 +36,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
           <div className="navbar-nav ">
             {links.map((link) => (
-              <a className="nav-link " href={link.path}>
+              <a className="nav-link " href={link.path} key={link.name}>
                 {link.name}
               </a>
             ))}
