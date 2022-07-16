@@ -10,9 +10,11 @@ function App() {
     <div className="App d-flex flex-column min-vh-100 bg-light">
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route index element={<Home />} />
-        </Routes>
+        <div className="p-5">
+          <Routes>
+            <Route index element={<Home />} />
+          </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
     </div>
