@@ -1,12 +1,14 @@
 import "./App.css";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./views/Home/Home";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App d-flex flex-column min-vh-100">
       <Navbar />
       <Home />
+      <Footer />
     </div>
   );
 }
