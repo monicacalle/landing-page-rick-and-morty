@@ -17,7 +17,10 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="characters" element={<CharacterList />} />
-            <Route path="characters/:id" element={<CharacterDetail />} />
+            <Route
+              path="characters/:characterId"
+              element={<CharacterDetail />}
+            />
           </Routes>
         </div>
         <Footer />
