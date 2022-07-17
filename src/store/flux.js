@@ -1,12 +1,16 @@
+import config from "../config/constants";
+
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       characters: [],
     },
     actions: {
-      setChharacters: (characters) => {
+      setCharacters: async () => {
+        const response = await fetch(`${config.ENDPOINT}/character`);
+        const data = await response.json();
         setStore({
-          characters: characters,
+          characters: data.results,
         });
       },
     },

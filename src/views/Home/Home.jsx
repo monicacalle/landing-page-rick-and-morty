@@ -1,16 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import Card from "../../components/Card";
 import rick_morty from "../../images/rick_morty.jpg";
-import config from "../../config/constants";
-import { Context } from "../../store/context";
+
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const { actions } = useContext(Context);
-  const getCharacters = async () => {
-    const response = await fetch(`${config.ENDPOINT}/character`);
-    const data = await response.json();
+  const navigate = useNavigate();
 
-    actions.setChharacters();
+  const getCharacters = async () => {
+    navigate("/characters");
   };
 
   return (
